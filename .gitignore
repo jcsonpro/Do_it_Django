@@ -131,3 +131,7 @@ dmypy.json
 # MacBook stuff
 .DS_Store
 downloads/
+
+# django
+.idea/
+migrations/
