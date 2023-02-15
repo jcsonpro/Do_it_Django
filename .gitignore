@@ -134,4 +134,4 @@ downloads/
 
 # django
 .idea/
-migrations/
+#migrations/
