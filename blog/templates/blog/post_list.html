@@ -8,13 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog list</title>
 
-    <!-- bootstrap -->
+    <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.min.css' %}" media="screen">
 
     <!-- fontawesome -->
-    <link href="./fontawesome/css/fontawesome.css" rel="stylesheet">
-    <link href="./fontawesome/css/brands.css" rel="stylesheet">
-    <link href="./fontawesome/css/solid.css" rel="stylesheet">
+    <link href="{% static 'blog/fontawesome/css/fontawesome.css' %}" rel="stylesheet" media="screen">
+    <link href="{% static 'blog/fontawesome/css/brands.css' %}" rel="stylesheet" media="screen">
+    <link href="{% static 'blog/fontawesome/css/solid.css' %}" rel="stylesheet" media="screen">
+
 
 </head>
 
@@ -97,7 +98,8 @@
                 <!-- Blog Post -->
                 {% for p in post_list %}
                 <div class="card mb-4">
-                    <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+                    <img class="card-img-top" src="{{ p.head_image.url }}" alt="Card image cap">
+
                     <div class="card-body">
                         <h2 class="card-title">{{ p.title }}</h2>
                         <p class="card-text">{{ p.content }}</p>
@@ -182,7 +184,7 @@
         <!-- /.container -->
     </footer>
 
-    <!-- bootstrap -->
+    <!-- Bootstrap core JavaScript -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
