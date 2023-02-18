@@ -1,34 +1,11 @@
 <!DOCTYPE html>
 {% load static %}
-<<<<<<< HEAD
-<html lang="ko">
-=======
 <html lang="en">
->>>>>>> 51d87a6b28693faad9408ecdefd935c70007a717
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="description" content=""/>
     <meta name="author" content=""/>
-<<<<<<< HEAD
-    <title>{{ post.title }} - Blog</title>
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet"/>
-
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.min.css' %}" media="screen">
-
-    <!-- fontawesome -->
-    <link href="./fontawesome/css/fontawesome.css" rel="stylesheet">
-    <link href="./fontawesome/css/brands.css" rel="stylesheet">
-    <link href="./fontawesome/css/solid.css" rel="stylesheet">
-</head>
-<body>
-<!-- Responsive navbar-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-=======
     <title>{{ post.title }}Blog</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
@@ -48,7 +25,6 @@
 <body>
 <!-- Responsive navbar-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
->>>>>>> 51d87a6b28693faad9408ecdefd935c70007a717
     <div class="container">
         <a class="navbar-brand" href="#!">Start Bootstrap</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -73,65 +49,20 @@
                 <!-- Post header-->
                 <header class="mb-4">
                     <!-- Post title-->
-<<<<<<< HEAD
-                    <h1 class="fw-bolder mb-1">Welcome to Blog Post!</h1>
-                    <!-- Post meta content-->
-                    <div class="text-muted fst-italic mb-2">Posted on January 1, 2022 by Start Bootstrap</div>
-=======
                     <h1 class="fw-bolder mb-1">{{ post.title }}</h1>
                     <!-- Post meta content-->
                     <div class="text-muted fst-italic mb-2">{{ post.created_at }}</div>
->>>>>>> 51d87a6b28693faad9408ecdefd935c70007a717
                     <!-- Post categories-->
                     <a class="badge bg-secondary text-decoration-none link-light" href="#!">Web Design</a>
                     <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>
                 </header>
                 <!-- Preview image figure-->
-<<<<<<< HEAD
                 <figure class="mb-4"><img class="img-fluid rounded"
-<<<<<<< HEAD
-                                          src="https://dummyimage.com/900x400/ced4da/6c757d.jpg" alt="..."/></figure>
-                <!-- Post content-->
-                <section class="mb-5">
-                    <p class="fs-5 mb-4">Science is an enterprise that should be cherished as an activity of the free
-                        human mind. Because it transforms who we are, how we live, and it gives us an understanding of
-                        our place in the universe.</p>
-                    <p class="fs-5 mb-4">The universe is large and old, and the ingredients for life as we know it are
-                        everywhere, so there's no reason to think that Earth would be unique in that regard. Whether of
-                        not the life became intelligent is a different question, and we'll see if we find that.</p>
-                    <p class="fs-5 mb-4">If you get asteroids about a kilometer in size, those are large enough and
-                        carry enough energy into our system to disrupt transportation, communication, the food chains,
-                        and that can be a really bad day on Earth.</p>
-                    <h2 class="fw-bolder mb-4 mt-5">I have odd cosmic thoughts every day</h2>
-                    <p class="fs-5 mb-4">For me, the most fascinating interface is Twitter. I have odd cosmic thoughts
-                        every day and I realized I could hold them to myself or share them with people who might be
-                        interested.</p>
-                    <p class="fs-5 mb-4">Venus has a runaway greenhouse effect. I kind of want to know what happened
-                        there because we're twirling knobs here on Earth without knowing the consequences of it. Mars
-                        once had running water. It's bone dry today. Something bad happened there as well.</p>
-=======
                                           src="{{ post.head_image.url }}" alt="..."/></figure>
-=======
-                {% if post.head_image %}
-                <figure class="mb-4">
-                    <img class="img-fluid rounded" src="{{ post.head_image.url }}" alt="{{ p }} head image"/>
-                </figure>
-                {% else %}
-                <figure class="mb-4">
-                    <img class="img-fluid rounded" src="https://picsum.photos/seed/{{ post.id }}/800/200" alt=" random image "/>
-                </figure>
-                {% endif %}
->>>>>>> c4f6bfa7f3b491ba8c65cf5b63b7a7e0fef9ae08
                 <!-- Post content-->
                 <section class="mb-5">
                     {{ post.content }}
->>>>>>> 51d87a6b28693faad9408ecdefd935c70007a717
                 </section>
-                {% if post.file_upload %}
-                <section class="mb-5">
-                    <a href="{{ post.file_upload.url }}" class="btn btn-outline-primary" role="button" aria-pressed="true">Download</a>
-                </section>
-                {% endif %}
             </article>
             <!-- Comments section-->
             <section class="mb-5">
@@ -240,20 +171,12 @@
     <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
 </footer>
 <!-- Bootstrap core JS-->
-<<<<<<< HEAD
-<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>-->
-<!-- Core theme JS-->
-<!--<script src="js/scripts.js"></script>-->
-
-<!-- bootstrap -->
-=======
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Core theme JS-->
 <script src="js/scripts.js"></script>
 
 
 <!-- Bootstrap core JavaScript -->
->>>>>>> 51d87a6b28693faad9408ecdefd935c70007a717
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -263,9 +186,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
         integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
         crossorigin="anonymous"></script>
-<<<<<<< HEAD
-
-=======
->>>>>>> 51d87a6b28693faad9408ecdefd935c70007a717
 </body>
 </html>
+
