@@ -63,7 +63,8 @@
                 </figure>
                 {% else %}
                 <figure class="mb-4">
-                    <img class="img-fluid rounded" src="https://picsum.photos/seed/{{ post.id }}/800/200" alt=" random image "/>
+                    <img class="img-fluid rounded" src="https://picsum.photos/seed/{{ post.id }}/800/200"
+                         alt=" random image "/>
                 </figure>
                 {% endif %}
                 <!-- Post content-->
@@ -72,16 +73,19 @@
                 </section>
                 {% if post.file_upload %}
                 <section class="mb-5">
-                    <a href="{{ post.file_upload.url }}" class="btn btn-outline-primary" role="button" aria-pressed="true">Download:
-                    {% if post.get_file_ext == 'csv' %}
+                    <a href="{{ post.file_upload.url }}" class="btn btn-outline-primary" role="button"
+                       aria-pressed="true">Download:
+                        {% if post.get_file_ext == 'csv' %}
                         <i class="fas fa-file-csv"></i>
-                    {% elif post.get_file_ext == 'xlsx' or post.get_file_ext == 'xls' %}
+                        {% elif post.get_file_ext == 'xlsx' or post.get_file_ext == 'xls' %}
                         <i class="fas fa-file-excel"></i>
-                    {% elif post.get_file_ext == 'docx' or post.get_file_ext == 'doc' %}
+                        {% elif post.get_file_ext == 'docx' or post.get_file_ext == 'doc' %}
                         <i class="fas fa-file-word"></i>
-                    {% else %}
+                        {% else %}
                         <i class="fas fa-file"></i>
-                    {% endif %}
+                        {% endif %}
+
+                        {{ post.get_file_name }}
                     </a>
                 </section>
                 {% endif %}
